@@ -4,8 +4,8 @@ DbHttpTokenSession is a [Yii](http://www.yiiframework.com) extension that extend
 
 ## How it works
 
-The first time that you make a request and your application use a PHP session, a token will be generated and will be echoed in the HTTP header response like "Token: 1234567890123456789012".
-Use this token in the next HTTP header request to continue the session, like "Token: 12345678901234567890123456789012". You can use the HTTP parameter `_t` too (by default).
+The first time that you make a request and your application use a PHP session, a token will be generated and will be echoed in the HTTP header response like `Token: 12345678901234567890123456789012`.
+Use this token in the next HTTP header request to continue the session, like `Token: 12345678901234567890123456789012`. You can use the HTTP parameter `_t` too (by default).
 Each request generate a new Token that will be sent to the HTTP header response.
 
 
@@ -25,16 +25,16 @@ Each request generate a new Token that will be sent to the HTTP header response.
 2. Edit your application configuration and set the session component to DbHttpTokenSession:
 ```php
 'components'=>array(
-    'session'=>array(
-        'class'=>'ext.DbHttpTokenSession',
-        'connectionID'=>'db', // Set the database Yii component, it's optional.
-        'tokenRequestKeyName'=>'_t', // The $_REQUEST index name that will store a token id instead the HTTP header, defaults to '_t'.
-        'tokenHeaderKeyName'=>'HTTP_TOKEN', // The $_SERVER index name that will store a token id, defaults to 'HTTP_TOKEN'.
-        'tokenTimeout'=>1440, // The number of seconds after which data will be seen as garbage and cleaned up, defaults to 1440 seconds.
-        'tokenTableName'=>'YiiToken', // The token table name, defaults to 'YiiToken'.
-        'autoCreateTokenTable'=>true, // Whether the token DB table should be automatically created if not exists, defaults to true.
-    ),
-)
+        'session'=>array(
+            'class'=>'ext.DbHttpTokenSession',
+            'connectionID'=>'db', // Set the database Yii component, it's optional.
+            'tokenRequestKeyName'=>'_t', // The $_REQUEST index name that will store a token id instead the HTTP header, defaults to '_t'.
+            'tokenHeaderKeyName'=>'HTTP_TOKEN', // The $_SERVER index name that will store a token id, defaults to 'HTTP_TOKEN'.
+            'tokenTimeout'=>1440, // The number of seconds after which data will be seen as garbage and cleaned up, defaults to 1440 seconds.
+            'tokenTableName'=>'YiiToken', // The token table name, defaults to 'YiiToken'.
+            'autoCreateTokenTable'=>true, // Whether the token DB table should be automatically created if not exists, defaults to true.
+        ),
+),
 ```
 
 ## Examples

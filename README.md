@@ -20,7 +20,7 @@ Each request generate a new Token that will be sent to the HTTP header response.
 1. Get the source in one of the following ways:
     * [Download](https://github.com/jlsalvador/DbHttpTokenSession/releases) the lasted version and place the files under `protected/extensions/DbHttpTokenSession/` under your application root directory.
     * Add this repository as a git submodule to your repository by calling under your application root directory:
-      `git submodule add https://github.com/jlsalvador/DbHttpTokenSession.git extensions/yiiext/behaviors/activerecord-relation`
+      `git submodule add https://github.com/jlsalvador/DbHttpTokenSession.git protected/extensions/DbHttpTokenSession`
 
 2. Edit your application configuration and set the session component to DbHttpTokenSession:
 ```php

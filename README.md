@@ -1,6 +1,6 @@
-# DbHttpTokenSession
+# YiiDbHttpTokenSession
 
-DbHttpTokenSession is a [Yii](http://www.yiiframework.com) extension that extends [CDbHttpSession](http://www.yiiframework.com/doc/api/1.1/CDbHttpSession) by using a database as a token-session linker for each request-response without the need of a cookie or PHPSESSID usage (like a Rest Api solution).
+YiiDbHttpTokenSession is a [Yii](http://www.yiiframework.com) extension that extends [CDbHttpSession](http://www.yiiframework.com/doc/api/1.1/CDbHttpSession) by using a database as a token-session linker for each request-response without the need of a cookie or PHPSESSID usage (like a Rest Api solution).
 
 ## How it works
 
@@ -18,15 +18,15 @@ Each request generate a new Token that will be sent to the HTTP header response.
 ## Install
 
 1. Get the source in one of the following ways:
-    * [Download](https://github.com/jlsalvador/DbHttpTokenSession/releases) the lasted version and place the files under `protected/extensions/DbHttpTokenSession/` under your application root directory.
+    * [Download](https://github.com/jlsalvador/YiiDbHttpTokenSession/releases) the lasted version and place the files under `protected/extensions/YiiDbHttpTokenSession/` under your application root directory.
     * Add this repository as a git submodule to your repository by calling under your application root directory:
-      `git submodule add https://github.com/jlsalvador/DbHttpTokenSession.git protected/extensions/DbHttpTokenSession`
+      `git submodule add https://github.com/jlsalvador/YiiDbHttpTokenSession.git protected/extensions/YiiDbHttpTokenSession`
 
-2. Edit your application configuration and set the session component to DbHttpTokenSession:
+2. Edit your application configuration and set the session component to YiiDbHttpTokenSession:
 ```php
 'components'=>array(
         'session'=>array(
-            'class'=>'ext.DbHttpTokenSession',
+            'class'=>'ext.YiiDbHttpTokenSession',
             'connectionID'=>'db', // Set the database Yii component, it's optional.
             'tokenRequestKeyName'=>'_t', // The $_REQUEST index name that will store a token id instead the HTTP header, defaults to '_t'.
             'tokenHeaderKeyName'=>'HTTP_TOKEN', // The $_SERVER index name that will store a token id, defaults to 'HTTP_TOKEN'.
@@ -72,4 +72,4 @@ curl -i -H "Accept: application/json" -H "Token: 1234567890123456789012345678901
 
 ## License
 
-DbHttpTokenSession is released under the [GNU Lesser General Public License](http://opensource.org/licenses/lgpl-license.php).
+YiiDbHttpTokenSession is released under the [GNU Lesser General Public License](http://opensource.org/licenses/lgpl-license.php).

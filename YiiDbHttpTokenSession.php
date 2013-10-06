@@ -5,7 +5,7 @@
  * @license http://opensource.org/licenses/lgpl-license.php GNU Lesser General Public License
  * @version: 201308081252
  */
-class DbHttpTokenSession extends CDbHttpSession
+class YiiDbHttpTokenSession extends CDbHttpSession
 {
 
 	/**
@@ -193,7 +193,7 @@ class DbHttpTokenSession extends CDbHttpSession
 	}
 
 	/**
-	 * Save the token data and destruct the DbHttpTokenSession application component.
+	 * Save the token data and destruct the YiiDbHttpTokenSession application component.
 	 * @throws CHttpException 500, can't save the token.
 	 */
 	public function __destruct()

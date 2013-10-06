@@ -1,0 +1,23 @@
+{
+    "name": "jlsalvador/yii-db-http-token-session",
+    "type": "yii-extension",
+    "description": "DbHttpTokenSession is a Yii extension that extends CDbHttpSession by using a database as a token-session linker for each request-response without the need of a cookie or PHPSESSID usage (like a Rest Api solution).",
+    "keywords": [
+        "yii",
+        "extension",
+        "yii-extension"
+    ],
+    "require": {
+    },
+    "license": "LGPL-3.0",
+    "authors": [
+        {
+            "name": "José Luis Salvador Rufo",
+            "email": "salvador.joseluis@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/jlsalvador/DbHttpTokenSession/issues",
+        "source": "https://github.com/jlsalvador/DbHttpTokenSession/tree/master"
+    }
+}
